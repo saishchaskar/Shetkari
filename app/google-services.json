@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "812724681513",
+    "project_id": "shetkari-007",
+    "storage_bucket": "shetkari-007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812724681513:android:dd3d1fe31272e7ed321538",
+        "android_client_info": {
+          "package_name": "com.oneearth.shetkari"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2LP4Q7d1fNE1GwkE8LqXVXH2qYDPSy-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
