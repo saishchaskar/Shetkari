@@ -1,4 +1,4 @@
-package com.oneearth.shetkari.Utilites
+package com.oneearth.shetkari.ui
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

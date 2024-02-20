@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,44 +13,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shetkari"
         tools:targetApi="31">
-
-
-
         <activity
-            android:name=".PricesActivity"
+            android:name=".SeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowActivity"
+            android:exported="false" />
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PriceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CropsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CropPriceChartActivity"
             android:exported="false"
             android:label="@string/title_activity_priceactivity"
             android:theme="@style/Theme.Shetkari" />
 
-        <activity android:name=".RegistrationActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Shetkari">
-        </activity>
-
-        <activity android:name=".SignInActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Shetkari">
-        </activity>
-
-        <activity android:name=".FarmerProfileActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Shetkari">
-        </activity>
-
-
-        <activity
-            android:name=".LanguageSelectionActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>

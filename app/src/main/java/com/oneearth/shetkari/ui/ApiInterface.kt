@@ -1,4 +1,4 @@
-package com.oneearth.shetkari.Utilites
+package com.oneearth.shetkari.ui
 
 import com.oneearth.shetkari.Models.WeatherModel
 import retrofit2.Call
