@@ -11,9 +11,20 @@
     <color name="atmosphere">#A8B4CC</color>
     <color name="clear">#FF9D6F</color>
     <color name="clouds">#454A4C</color>
-    <color name="white">#020101</color>
+    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="teal_700">#008080</color>
-
-
+    <color name="green">#34c759</color>
+    <color name="light_green">#e6f7f0</color>
+    <color name="grey">#807b7b</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="colorPrimary">#10174B</color>
+    <color name="darkGray">#808080</color>
+    <color name="greenlite">#F56ADA23</color>
+    <color name="secondary">#E2F2DA</color>
+    <color name="colorThird">#fc7557</color>
+    <color name="fontColor">#FF404A3A</color>
 </resources>
