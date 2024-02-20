@@ -17,3 +17,11 @@ data class WeatherModel(
     val weather: List<Weather>,
     val wind: Wind
 )
+
+
+
+
+
+
+
+
