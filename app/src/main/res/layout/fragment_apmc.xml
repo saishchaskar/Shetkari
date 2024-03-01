@@ -57,7 +57,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/searchbox_background"
-            android:spinnerMode="dropdown"
+            android:spinnerMode="dialog"
             app:layout_constraintBottom_toBottomOf="@id/apmcSearchBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/guide1"
@@ -85,7 +85,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/searchbox_background"
-            android:spinnerMode="dropdown"
+            android:spinnerMode="dialog"
 
             app:layout_constraintBottom_toBottomOf="@id/apmcSearchBar2"
             app:layout_constraintEnd_toEndOf="parent"
