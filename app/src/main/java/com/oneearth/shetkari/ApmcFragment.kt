@@ -70,32 +70,27 @@ class ApmcFragment : Fragment() {
         binding.dateValueTextApmc.text = SimpleDateFormat("dd/MM/yyyy").format(Date()).toString()
 
         states = arrayOf(
-            "None",
+            "Click Here",
             "Andhra Pradesh",
+            "Bihar",
             "Chandigarh",
-            "Chattisgarh",
             "Gujarat",
-            "Hariyana",
-            "Himachal Pradesh",
-            "Jammu & Kashmir",
-            "Jharkhand",
-            "Karnataka",
+            "Haryana",
             "Kerala",
             "Madhya Pradesh",
             "Maharashtra",
             "Odisha",
-            "Pudu Cherry",
             "Punjab",
             "Rajasthan",
             "Tamil Nadu",
             "Telangana",
             "Uttar Pradesh",
-            "Uttarakhand",
+            "Uttrakhand",
             "West Bengal"
         )
 
         var districtInGujarat: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Ahmedabad",
             "Amreli",
             "Anand",
@@ -132,7 +127,7 @@ class ApmcFragment : Fragment() {
 
         )
         var districtInMaha: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Ahmednagar",
             "Akola",
             "Amravati",
@@ -171,7 +166,7 @@ class ApmcFragment : Fragment() {
         )
 
         var districtInRajasthan: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Ajmer",
             "Alwar",
             "Banswara",
@@ -208,7 +203,7 @@ class ApmcFragment : Fragment() {
         )
 
         var districtInUttarPradesh: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Agra",
             "Aligarh",
             "Allahabad",
@@ -287,7 +282,7 @@ class ApmcFragment : Fragment() {
         )
 
         var districtInWestBengal: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Alipurduar",
             "Bankura",
             "Birbhum",
@@ -314,7 +309,7 @@ class ApmcFragment : Fragment() {
         )
 
         var districtInKerala: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Alappuzha",
             "Ernakulam",
             "Idukki",
@@ -332,7 +327,7 @@ class ApmcFragment : Fragment() {
         )
 
         var districtInAndhraPradesh: Array<String> = arrayOf(
-            "None",
+            "Click Here to Select District",
             "Anantapur",
             "Chittoor",
             "East Godavari",
@@ -348,7 +343,60 @@ class ApmcFragment : Fragment() {
             "Kadapa"
         )
 
-        var emptyDistricts : Array<String> = arrayOf("None")
+        var districtInChandigarh: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Chandigarh"
+        )
+        var districtInBihar: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Muzaffarpur",
+            "Bhojpur"
+        )
+        var districtInMadhyaPradesh: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Seoni",
+            "Dhar",
+            "Narsinghpur",
+            "Rajgarh",
+            "Chhatarpur",
+            "Chhindwara"
+        )
+        var districtInHaryana: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Rewari"
+        )
+        var districtInOdisha: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Balasore",
+            "Boudh",
+            "Dhenkanal",
+            "Bolangir"
+        )
+        var districtInPunjab: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Amritsar",
+            "Bhatinda",
+            "Moga",
+            "Mohali",
+            "Ropar (Rupnagar)",
+            "Tarntaran"
+        )
+        var districtInTamilNadu: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Dindigul",
+            "Coimbatore"
+        )
+        var districtInTelangana: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Karimnagar"
+        )
+        var districtInUttrakhand: Array<String> = arrayOf(
+            "Click Here to Select District",
+            "Dehradoon"
+        )
+
+
+        var emptyDistricts : Array<String> = arrayOf("Click Here to Select District")
 
         var aa = ArrayAdapter(
             activity!!.applicationContext,
@@ -367,21 +415,15 @@ class ApmcFragment : Fragment() {
             "Rajasthan" to districtInRajasthan,
             "Uttar Pradesh" to districtInUttarPradesh,
             "West Bengal" to districtInWestBengal,
-
-            "Chandigarh" to emptyDistricts,
-            "Chattisgarh" to emptyDistricts,
-            "Hariyana" to emptyDistricts,
-            "Himachal Pradesh" to emptyDistricts,
-            "Jammu & Kashmir" to emptyDistricts,
-            "Jharkhand" to emptyDistricts,
-            "Karnataka" to emptyDistricts,
-            "Madhya Pradesh" to emptyDistricts,
-            "Odisha" to emptyDistricts,
-            "Pudu Cherry" to emptyDistricts,
-            "Punjab" to emptyDistricts,
-            "Tamil Nadu" to emptyDistricts,
-            "Telangana" to emptyDistricts,
-            "Uttarakhand" to emptyDistricts
+            "Bihar" to districtInBihar,
+            "Madhya Pradesh" to districtInMadhyaPradesh,
+            "Chandigarh" to districtInChandigarh,
+            "Haryana" to districtInHaryana,
+            "Odisha" to districtInOdisha,
+            "Punjab" to districtInPunjab,
+            "Tamil Nadu" to districtInTamilNadu,
+            "Telangana" to districtInTelangana,
+            "Uttrakhand" to districtInUttrakhand
         )
 
 
@@ -467,7 +509,7 @@ class ApmcFragment : Fragment() {
 
             apmc2.enqueue(object : Callback<APMCMain> {
                 override fun onFailure(call: Call<APMCMain>, t: Throwable) {
-                    Log.d("bharat222", "fail ho gya", t)
+                    Log.d("fetch", "Failed", t)
                     binding.progressApmc.visibility = View1.GONE
                     binding.loadingTextAPMC.visibility = View1.GONE
                 }
