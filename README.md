@@ -1,5 +1,7 @@
 # Shetkari
 # Farmer Supportive Application
+ Based on kotlin and XML Backed by API's such as Price, Weather, News
+# Feature
  Developed a feature that shows current market prices from data.gov.in(OGD), for predictive analysis.\
 • Created a tool that provides with accurate weather updates, aiding in planning effectively.\
 • Utilized Firebase tools to store data securely and authenticate users for seamless login.\
