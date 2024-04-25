@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "812724681513",
+    "firebase_url": "https://shetkari-007-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "shetkari-007",
     "storage_bucket": "shetkari-007.appspot.com"
   },
@@ -12,7 +13,12 @@
           "package_name": "com.oneearth.shetkari"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "812724681513-2o6bppnn083g3fqohqiled1ln6jmbtsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD2LP4Q7d1fNE1GwkE8LqXVXH2qYDPSy-o"
@@ -20,7 +26,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812724681513-2o6bppnn083g3fqohqiled1ln6jmbtsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

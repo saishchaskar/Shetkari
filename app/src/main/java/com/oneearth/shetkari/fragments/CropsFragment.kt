@@ -14,6 +14,6 @@ class CropsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_crops, container, false)
+        return inflater.inflate(R.layout.activity_show, container, false)
     }
 }

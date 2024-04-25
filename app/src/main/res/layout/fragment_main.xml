@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="20dp"
-                    android:text="Explore the way of Smart Farming !!\n with \n Data Analysis"
+                    android:text="Grow with Framining"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"

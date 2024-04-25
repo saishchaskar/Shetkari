@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         // Replace the existing fragment with the new one
         transaction.replace(R.id.frame_layout, fragment)
-
+        transaction.addToBackStack(null)
         // Commit the transaction
         transaction.commit()
     }
