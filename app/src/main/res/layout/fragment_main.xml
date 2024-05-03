@@ -17,30 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/editTextText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/searchbox_background"
-                    android:drawableEnd="@drawable/search2"
-                    android:ems="10"
-                    android:hint="Searching"
-                    android:inputType="text"
-                    android:padding="8dp"
-                    android:textSize="16dp"
-                    android:textStyle="italic" />
-
-            </LinearLayout>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
@@ -63,11 +39,13 @@
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Grow with Framining"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Grow with Smart Farming"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
