@@ -1,2 +1,8 @@
 # Shetkari
-An Farmer Supportive Application
+# Farmer Supportive Application
+ Based on kotlin and XML, Backed by API's such as Price, Weather and News
+# Feature
+ Developed a feature that shows current market prices from data.gov.in(OGD), for predictive analysis.\
+• Created a tool that provides with accurate weather updates, aiding in planning effectively.\
+• Utilized Firebase tools to store data securely and authenticate users for seamless login.\
+• Used Android Studio to design the modular app’s structure with MVVM architecture making it easy to manage and scale .
