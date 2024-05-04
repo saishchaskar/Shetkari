@@ -29,7 +29,7 @@ import android.view.View as View1
  */
 class ApmcFragment : Fragment() {
 
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
     lateinit var adapter: ApmcAdapter
@@ -430,7 +430,7 @@ class ApmcFragment : Fragment() {
         binding.spinner1.onItemSelectedListener = object :
             AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View1?, p2: Int, p3: Long) {

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -40,20 +39,20 @@ class EditProfileFragment : Fragment() {
         editEmail = view.findViewById(R.id.editEmail)
         editUsername = view.findViewById(R.id.editUsername)
         editPassword = view.findViewById(R.id.editPassword)
-        saveButton = view.findViewById(R.id.saveButton)
+//        saveButton = view.findViewById(R.id.saveButton)
 
         // Show user data in EditText fields
         showData()
 
         // Set onClickListener for save button
-        saveButton.setOnClickListener {
-            // Check if any data is changed and update it in the database
-            if (isNameChanged() || isEmailChanged() || isPasswordChanged()) {
-                Toast.makeText(requireContext(), "Profile Updated", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(requireContext(), "No changes made", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        saveButton.setOnClickListener {
+//            // Check if any data is changed and update it in the database
+//            if (isNameChanged() || isEmailChanged() || isPasswordChanged()) {
+//                Toast.makeText(requireContext(), "Profile Updated", Toast.LENGTH_SHORT).show()
+//            } else {
+//                Toast.makeText(requireContext(), "No changes made", Toast.LENGTH_SHORT).show()
+//            }
+//        }
 
         return view
     }

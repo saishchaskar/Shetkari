@@ -1,100 +1,98 @@
 package com.oneearth.shetkari.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.oneearth.shetkari.R
 
 
 class ProfileFragment : Fragment() {
-    private var profileName: TextView? = null
-    private var profileEmail: TextView? = null
-    private var profileUsername: TextView? = null
-    private var profilePassword: TextView? = null
-    private var titleName: TextView? = null
-    private var titleUsername: TextView? = null
-    private var editProfile: Button? = null
+    private lateinit var profileName: TextView
+    private lateinit var profileEmail: TextView
+    private lateinit var profileUsername: TextView
+    private lateinit var titleName: TextView
+    private lateinit var titleUsername: TextView
+    private lateinit var editProfile: Button
+    private lateinit var database: DatabaseReference
+    private var currentUser: FirebaseUser? = null
+    private var username: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_user_profile, container, false)
-        profileName = view.findViewById<TextView>(R.id.profileName)
-        profileEmail = view.findViewById<TextView>(R.id.profileEmail)
-        profileUsername = view.findViewById<TextView>(R.id.profileUsername)
-        profilePassword = view.findViewById<TextView>(R.id.profilePassword)
-        titleName = view.findViewById<TextView>(R.id.titleName)
-        titleUsername = view.findViewById<TextView>(R.id.titleUsername)
-        editProfile = view.findViewById<Button>(R.id.editButton)
 
-        // Ensure editProfile is not null before using it
-        editProfile?.setOnClickListener(View.OnClickListener { passUserData() })
+        // Initialize Firebase
+        database = FirebaseDatabase.getInstance().reference
+        currentUser = FirebaseAuth.getInstance().currentUser
 
+        // Initialize views
+        profileName = view.findViewById(R.id.profileName)
+        profileEmail = view.findViewById(R.id.profileEmail)
+        profileUsername = view.findViewById(R.id.profileUsername)
+        titleName = view.findViewById(R.id.titleName)
+        titleUsername = view.findViewById(R.id.titleUsername)
+        editProfile = view.findViewById(R.id.editButton)
+
+        editProfile.setOnClickListener { passUserData() }
+
+        // Fetch and display user data
         showUserData()
+
         return view
     }
 
+    private fun showUserData() {
+        // Fetch user data from Firebase based on the current user's username
+        currentUser?.let { user ->
+            username = user.displayName
+            username?.let { uname ->
+                database.child("users").child(uname).addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        if (snapshot.exists()) {
+                            val name = snapshot.child("name").getValue(String::class.java)
+                            val email = snapshot.child("email").getValue(String::class.java)
+                            val username = snapshot.child("username").getValue(String::class.java)
 
-    fun showUserData() {
-        val args = arguments
-        if (args != null) {
-            val nameUser = args.getString("name")
-            val emailUser = args.getString("email")
-            val usernameUser = args.getString("username")
-            val passwordUser = args.getString("password")
-            titleName!!.text = nameUser
-            titleUsername!!.text = usernameUser
-            profileName!!.text = nameUser
-            profileEmail!!.text = emailUser
-            profileUsername!!.text = usernameUser
-            profilePassword!!.text = passwordUser
+                            // Update UI with fetched data
+                            titleName.text = name
+                            titleUsername.text = username
+                            profileName.text = name
+                            profileEmail.text = email
+                            profileUsername.text = username
+                        } else {
+                            Log.d("ProfileFragment", "No data found for username: $uname")
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Log.e("ProfileFragment", "Database error: ${error.message}")
+                    }
+                })
+            }
         }
     }
 
-    fun passUserData() {
-        val userUsername = profileUsername!!.text.toString().trim { it <= ' ' }
-        val reference = FirebaseDatabase.getInstance().getReference("users")
-        val checkUserDatabase = reference.orderByChild("username").equalTo(userUsername)
-        checkUserDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    val nameFromDB = snapshot.child(userUsername).child("name").getValue(
-                        String::class.java
-                    )
-                    val emailFromDB = snapshot.child(userUsername).child("email").getValue(
-                        String::class.java
-                    )
-                    val usernameFromDB = snapshot.child(userUsername).child("username").getValue(
-                        String::class.java
-                    )
-                    val passwordFromDB = snapshot.child(userUsername).child("password").getValue(
-                        String::class.java
-                    )
-                    val args = Bundle()
-                    args.putString("name", nameFromDB)
-                    args.putString("email", emailFromDB)
-                    args.putString("username", usernameFromDB)
-                    args.putString("password", passwordFromDB)
-                    val fragment = EditProfileFragment()
-                    fragment.setArguments(args)
-                    activity!!.supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, fragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {}
-        })
+    private fun passUserData() {
+        // Pass user data to EditProfileFragment
+        val fragment = EditProfileFragment()
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_layout, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }
-

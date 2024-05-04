@@ -1,6 +1,7 @@
 package com.oneearth.shetkari
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import com.oneearth.shetkari.fragments.WeatherFragment
 
 class MainActivity : AppCompatActivity() {
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.navbar)
@@ -48,7 +50,10 @@ class MainActivity : AppCompatActivity() {
             loadFragment(ProfileFragment())
         }
 
+
+
     }
+
 
     private fun loadFragment(fragment: Fragment) {
         val fragmentManager: FragmentManager = supportFragmentManager

@@ -11,27 +11,28 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_blue_600">
+        android:background="@drawable/weather">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/main_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:cardCornerRadius="25dp"
             android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp">
+            android:layout_marginEnd="60dp"
+            app:cardBackgroundColor="#27FFF9F9"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
+                android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -42,23 +43,23 @@
                         android:id="@+id/location_option_bar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center"
+                        android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent">
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
 
                         <TextView
                             android:id="@+id/selected_location"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
                             android:layout_marginStart="5dp"
                             android:layout_weight="1"
-                            android:textSize="25sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
                             android:gravity="start"
-                            android:layout_margin="5dp">
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold">
 
 
                         </TextView>
@@ -67,9 +68,9 @@
                             android:id="@+id/current_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_my_location_24"
+                            android:layout_margin="5dp"
                             android:background="?selectableItemBackgroundBorderless"
-                            android:layout_margin="5dp">
+                            android:src="@drawable/ic_baseline_my_location_24">
 
                         </ImageView>
 
@@ -77,9 +78,9 @@
                             android:id="@+id/search_option"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_round_search_24"
+                            android:layout_margin="5dp"
                             android:background="?selectableItemBackgroundBorderless"
-                            android:layout_margin="5dp">
+                            android:src="@drawable/ic_round_search_24">
 
                         </ImageView>
 
@@ -90,21 +91,21 @@
                         android:id="@+id/location_search_bar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:orientation="horizontal"
                         android:gravity="center"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent">
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
                             android:id="@+id/back"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="?attr/homeAsUpIndicator"
+                            android:layout_margin="5dp"
                             android:background="?selectableItemBackgroundBorderless"
-                            android:layout_margin="5dp">
+                            app:srcCompat="?attr/homeAsUpIndicator">
 
                         </ImageView>
 
@@ -114,14 +115,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:layout_weight="1"
+                            android:background="@drawable/rounded_search"
+                            android:gravity="start"
                             android:hint="Search City"
                             android:imeOptions="actionSearch"
                             android:inputType="text"
+                            android:padding="10dp"
                             android:textColor="@color/black"
-                            android:background="@drawable/rounded_search"
-                            android:textColorHint="@color/black"
-                            android:gravity="start"
-                            android:padding="10dp">
+                            android:textColorHint="@color/black">
 
                         </EditText>
 
@@ -143,11 +144,11 @@
                     android:id="@+id/weather_temperature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="75sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:layout_marginTop="25dp"
                     android:gravity="center"
-                    android:layout_marginTop="25dp">
+                    android:textColor="@color/black"
+                    android:textSize="75sp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -155,28 +156,28 @@
                     android:id="@+id/weather_state"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
-                    android:gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="25dp">
+                    android:layout_marginBottom="25dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp">
 
                 </TextView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
                     android:orientation="horizontal"
-                    android:weightSum="2"
-                    android:layout_marginBottom="15dp">
+                    android:weightSum="2">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
                         android:gravity="center"
-                        android:layout_marginStart="5dp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="50dp"
@@ -188,18 +189,18 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:gravity="center"
-                            android:layout_marginStart="5dp">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/weather_humidity"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/black"
                                 android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/black">
+                                android:textStyle="bold">
 
                             </TextView>
 
@@ -207,8 +208,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Humidity"
-                                android:textSize="15sp"
-                                android:textColor="@color/black">
+                                android:textColor="@color/black"
+                                android:textSize="15sp">
 
                             </TextView>
 
@@ -219,10 +220,10 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
                         android:gravity="center"
-                        android:layout_marginStart="5dp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="50dp"
@@ -234,18 +235,18 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
                             android:layout_weight="1"
-                            android:orientation="vertical"
                             android:gravity="center"
-                            android:layout_marginStart="5dp">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/weather_wind_speed"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/black"
                                 android:textSize="20sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/black">
+                                android:textStyle="bold">
 
                             </TextView>
 
@@ -253,8 +254,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="WindSpeed"
-                                android:textSize="13sp"
-                                android:textColor="@color/black">
+                                android:textColor="@color/black"
+                                android:textSize="13sp">
 
                             </TextView>
 

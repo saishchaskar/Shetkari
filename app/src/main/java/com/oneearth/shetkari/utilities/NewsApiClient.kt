@@ -12,12 +12,10 @@ import org.json.JSONObject
 import java.io.IOException
 
 object NewsApiClient {
-    private const val BASE_URL = "https://newsapi.org/v2/top-headlines"
-    private const val COUNTRY_CODE = "in"
-    private const val API_KEY = "d7b8316ab7924a05818da03b403ad809"
+
 
     fun fetchNews(callback: (List<Article>?, String?) -> Unit) {
-        val url = "$BASE_URL?country=$COUNTRY_CODE&apiKey=$API_KEY"
+        val url = "https://newsapi.org/v2/everything?q=agriculture crops india&apiKey=d7b8316ab7924a05818da03b403ad809"
 
         val request = Request.Builder()
             .url(url)

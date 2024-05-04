@@ -10,7 +10,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/market">
 
         <ProgressBar
             android:id="@+id/progressApmc"
@@ -43,7 +44,7 @@
             android:layout_margin="12dp"
             android:layout_marginEnd="20dp"
             android:text="State : "
-            android:textColor="@color/fontColor"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/apmcSearchBar2"
@@ -71,7 +72,7 @@
 
             android:layout_marginEnd="20dp"
             android:text="District : "
-            android:textColor="@color/fontColor"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/hr1Apmc"
@@ -115,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Last Updated: "
-            android:textColor="@color/fontColor"
+            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/dateValueTextApmc"
@@ -128,7 +129,7 @@
             android:layout_marginHorizontal="17dp"
             android:layout_marginVertical="5dp"
             android:text="29/01/2021"
-            android:textColor="@color/fontColor"
+            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/dateTextApmc"
@@ -142,7 +143,7 @@
             android:layout_height="1dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="12dp"
-            android:background="#202124"
+            android:background="#F4F4F4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/apmcSearchBar2" />
@@ -152,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Please Select State and District"
-            android:textColor="@color/fontColor"
+            android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"

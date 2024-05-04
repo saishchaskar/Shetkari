@@ -1,5 +1,8 @@
 package com.oneearth.shetkari.Adapter
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +33,15 @@ class NewsAdapter : ListAdapter<Article, NewsAdapter.NewsViewHolder>(DiffCallbac
         private val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
         private val publishedAtTextView: TextView = itemView.findViewById(R.id.publishedAtTextView)
         private val newsImageView: ImageView = itemView.findViewById(R.id.newsImageView)
+        private val urlTextView: TextView = itemView.findViewById(R.id.urlTextView)
+
+        init {
+            // Add click listener to the whole item view
+            itemView.setOnClickListener {
+                val article = getItem(adapterPosition)
+                openUrl(itemView.context, article.url)
+            }
+        }
 
         fun bind(article: Article) {
             itemView.apply {
@@ -45,6 +57,9 @@ class NewsAdapter : ListAdapter<Article, NewsAdapter.NewsViewHolder>(DiffCallbac
                     .error(R.drawable.ic_unknown) // Error image
                     .diskCacheStrategy(DiskCacheStrategy.DATA) // Cache strategy
                     .into(newsImageView)
+
+                // Set URL text
+                urlTextView.text = article.url
             }
         }
     }
@@ -57,5 +72,10 @@ class NewsAdapter : ListAdapter<Article, NewsAdapter.NewsViewHolder>(DiffCallbac
         override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
             return oldItem == newItem
         }
+    }
+
+    private fun openUrl(context: Context, url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        context.startActivity(intent)
     }
 }

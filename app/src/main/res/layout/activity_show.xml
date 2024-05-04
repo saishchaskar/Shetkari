@@ -9,6 +9,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/crops_menu"
         android:orientation="vertical" />
 
     <LinearLayout
@@ -53,8 +54,10 @@
                 android:layout_height="wrap_content"
                 android:text="Mirchi"
                 android:textAlignment="center"
-                android:textColor="#1e4368"
-                android:textSize="17sp" />
+                android:textAllCaps="false"
+                android:textColor="#FEFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -90,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cauliflower"
                 android:textAlignment="center"
-                android:textColor="#1e4368"
+                android:textColor="#FEFFFF"
                 android:textSize="17sp" />
 
         </LinearLayout>
@@ -125,8 +128,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Corn"
+
                 android:textAlignment="center"
-                android:textColor="#1e4368"
+                android:textColor="#FEFFFF"
                 android:textSize="17sp" />
 
         </LinearLayout>
@@ -162,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:text="Potato"
                 android:textAlignment="center"
-                android:textColor="#1e4368"
+                android:textColor="#FEFFFF"
                 android:textSize="17sp" />
 
         </LinearLayout>
@@ -211,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:text="Brinjal"
                     android:textAlignment="center"
-                    android:textColor="#1e4368"
+                    android:textColor="#FEFFFF"
                     android:textSize="17sp" />
 
 
@@ -249,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:text="GreenPea"
                     android:textAlignment="center"
-                    android:textColor="#1e4368"
+                    android:textColor="#FEFFFF"
                     android:textSize="17sp" />
 
             </LinearLayout>
@@ -286,7 +290,7 @@
                     android:layout_height="wrap_content"
                     android:text="Shimla"
                     android:textAlignment="center"
-                    android:textColor="#1e4368"
+                    android:textColor="#FEFFFF"
                     android:textSize="17sp" />
 
             </LinearLayout>
@@ -323,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:text="Ginger"
                     android:textAlignment="center"
-                    android:textColor="#1e4368"
+                    android:textColor="#FEFFFF"
                     android:textSize="17sp" />
 
             </LinearLayout>

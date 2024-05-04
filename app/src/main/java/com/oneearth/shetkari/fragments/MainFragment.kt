@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -28,6 +29,8 @@ class MainFragment : Fragment() {
         // Find the view with ID R.id.ShowAll
         val showAllView: View = view.findViewById(R.id.ShowAll)
         val seemoreView: View = view.findViewById(R.id.See)
+        val tomatoImageView = view.findViewById<ImageView>(R.id.tomato)
+
 
         // Set a click listener for the ShowAllView
         showAllView.setOnClickListener {
@@ -37,6 +40,13 @@ class MainFragment : Fragment() {
         seemoreView.setOnClickListener{
             loadFragment(ArtmoreFragment())
         }
+        tomatoImageView.setOnClickListener {
+            // Navigate to GuideFragment
+          loadFragment(GuideFragment())
+        }
+
+
+
 
         val recyclerView: RecyclerView = view.findViewById(R.id.View)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
