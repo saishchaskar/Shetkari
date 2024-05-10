@@ -5,5 +5,6 @@
     <string name="your_web_client_id">812724681513-2o6bppnn083g3fqohqiled1ln6jmbtsj.apps.googleusercontent.com</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_state"><![CDATA[<resources>\n    <string-array name=\"states_array\">\n        <item>Andhra Pradesh</item>\n        <item>Bihar</item>\n        <item>Chandigarh</item>\n        <item>Gujarat</item>\n        <item>Haryana</item>\n        <item>Kerala</item>\n        <item>Madhya Pradesh</item>\n        <item>Maharashtra</item>\n        <item>Odisha</item>\n        <item>Punjab</item>\n        <item>Rajasthan</item>\n        <item>Tamil Nadu</item>\n        <item>Telangana</item>\n        <item>Uttar Pradesh</item>\n        <item>Uttrakhand</item>\n        <item>West Bengal</item>\n    </string-array>\n</resources>\n]]></string>
 
 </resources>

@@ -10,9 +10,9 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.oneearth.shetkari.fragments.CropsFragment
 import com.oneearth.shetkari.fragments.MainFragment
+import com.oneearth.shetkari.fragments.PriceFragment
 import com.oneearth.shetkari.fragments.ProfileFragment
 import com.oneearth.shetkari.fragments.WeatherFragment
-
 class MainActivity : AppCompatActivity() {
 
     @SuppressLint("MissingInflatedId")
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         priceImageView.setOnClickListener {
-            loadFragment(ApmcFragment())
+            loadFragment(PriceFragment())
         }
 
         weatherImageView.setOnClickListener {
