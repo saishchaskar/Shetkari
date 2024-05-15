@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pagebkg"
+    android:background="@drawable/tractor"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".EditProfileFragment">
+    tools:context=".fragments.EditProfileFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
+        app:cardBackgroundColor="#97FFFFFF"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:text="Edit Profile"
                 android:textAlignment="center"
-                android:textColor="@color/lavender"
+                android:textColor="@color/fontColor"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
