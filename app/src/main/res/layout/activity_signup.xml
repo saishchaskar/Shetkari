@@ -59,17 +59,7 @@
                 android:padding="8dp"
                 android:textColor="@color/grey" />
 
-            <EditText
-                android:id="@+id/signup_username"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/lavender_border"
-                android:drawableLeft="@drawable/ic_baseline_person_pin_24"
-                android:drawablePadding="8dp"
-                android:hint="Username"
-                android:padding="8dp"
-                android:textColor="@color/grey" />
+
 
             <EditText
                 android:id="@+id/signup_password"
@@ -83,6 +73,17 @@
                 android:inputType="textPassword"
                 android:padding="8dp"
                 android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/signup_password2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+                android:drawablePadding="8dp"
+                android:hint="Confirm Password"
+                android:padding="8dp"
+                android:textColor="@color/grey" />
 
             <Button
                 android:id="@+id/signup_button"

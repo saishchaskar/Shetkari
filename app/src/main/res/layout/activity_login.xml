@@ -36,14 +36,14 @@
 
 
             <EditText
-                android:id="@+id/login_username"
+                android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/ic_baseline_person_pin_24"
                 android:drawablePadding="8dp"
-                android:hint="Username"
+                android:hint="Email ID"
                 android:padding="8dp"
                 android:textColor="@color/grey" />
 
